@@ -1,0 +1,23 @@
+{
+  "name": "tdd-test-jest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "concurrently -k -n \"Typescript,Node\" -p \"[{name}]\" -c \"blue,green\" \"tsc --watch\" \"nodemon dist/index.js\"",
+    "start": "tsc && node dist/index.js",
+    "test": "jest --verbose",
+    "test-watch": "jest --verbose --watchAll"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/jest": "^24.0.0",
+    "@types/node": "^10.12.21",
+    "concurrently": "^4.1.0",
+    "jest": "^24.0.0",
+    "nodemon": "^1.18.9",
+    "ts-jest": "^23.10.5",
+    "typescript": "^3.3.1"
+  }
+}
